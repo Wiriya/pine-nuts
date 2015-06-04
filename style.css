@@ -1,0 +1,539 @@
+/*
+Theme Name: Pine nuts
+Theme URI: http://underscores.me/
+Author: BananaCoding
+Author URI: http://bananacoding.com
+Description: Pine Nuts is a one page Wordpress theme.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pine-nuts
+Tags:black, gray, white, one-column, fixed-layout,light,front-page-post-form,full-width-template,rtl-language-support,sticky-post,theme-options,responsive-layout, custom-background, custom-menu, editor-style, featured-images, threaded-comments, translation-ready,photoblogging
+
+Pine nuts is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+*/
+
+body {
+	word-wrap: break-word;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+
+/* Images and wp-captions should always fit and be responsive */
+img {
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+}
+img[class*="wp-image-"] {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	max-width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0 10px;
+}
+.wp-caption.aligncenter {
+	margin-bottom: 10px;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+}
+.wp-caption .wp-caption-text {
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* WP Gallery */
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.gallery dd {
+	margin: 0;
+}
+.gallery-caption {
+	display: block;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+
+/* Content */
+.main-content-inner {
+	padding-bottom: 1.5em;
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.sticky {
+	display: block;
+}
+.bypostauthor {
+	display: block;
+}
+
+
+/* Clearing */
+.clear {
+	clear: both;
+}
+
+/* Navigation */
+
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:active>.dropdown-menu, .dropdown-submenu:hover>.dropdown-menu {
+display: block;
+}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:active>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+
+/* Here some needed widget styles
+ * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
+.widget { margin-bottom: 2em; }
+.widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
+
+/* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
+ * Note: you can change the whole appearance of the search_form() function in our searchform.php */
+.widget_search .search-form input[type="submit"] { display: none; }
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
+ * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+ .comment .children { margin-left: 1.5em; }
+
+/**
+* Some WP Theme Repository requirements
+*/
+
+.sticky {
+}
+
+.gallery-caption {
+
+}
+
+.bypostauthor {
+
+}
+
+.entry-meta {
+	clear: both;
+}
+
+/* pine nuts */
+body {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #fafafa;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Playfair Display', serif;
+}
+
+.icon-block {
+    padding: 0 15px;
+}
+
+.brandlogo {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro .intro-body .brand-heading {
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.intro .intro-body .intro-text {
+    font-style: normal;
+    font-weight: 200;
+    text-align: center;
+    font-size: 20px;
+}
+
+.white-text {
+    color: white;
+}
+
+.fixed-menu {
+    z-index: 900;
+    height: 62px;
+    width: 31px;
+}
+
+.fixed-menu i {
+    color: #FFAB40;
+}
+
+.side-menu {
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ul.side-menu li > a {
+    font-size: 20px;
+    color: #d4d4d4;
+    width: 100%;
+}
+
+ul.side-menu li .btn-flat {
+    margin-bottom: 0px;
+}
+
+ul.side-menu li {
+    border-left: 5px solid #d4d4d4;
+    padding: 0px;
+    font-weight: 300;
+}
+
+ul.side-menu li.logo {
+    border-left: 5px solid #fff;
+}
+
+ul.side-menu li:hover.logo {
+    border-left: 5px solid #fff;
+}
+
+ul.side-menu li:hover,
+ul.side-menu li.active {
+    color: black;
+    background-color: white;
+    border-left: 5px solid #FFAB40;
+}
+
+ul.side-menu li:hover a,
+ul.side-menu li.active a {
+    color: black;
+}
+
+.brand-bg {
+    background-color: rgba(119, 119, 119, 0.2);
+    padding: 30px;
+}
+
+.about-us,
+.portfolio,
+.blogs,
+.contact {
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    background-color: #fafafa;
+    padding-bottom: 150px;
+    padding-top: 100px;
+}
+
+.about-us .container {
+    background-color: white;
+    padding: 50px 30px;
+}
+
+.portfolio .card .card-image img{
+    height: 200px;
+}
+
+.blogs .container {
+    background-color: #fff;
+}
+
+.blogs .card {
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0), 0px 2px 10px 0px rgba(0, 0, 0, 0);
+}
+
+.about-us h1,
+.portfolio h1,
+.blogs h1 {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-size: 80px;
+    color: #616161;
+}
+
+.about-us h3{
+    color: #FFAB40;
+    font-weight: 300;
+}
+.portfolio h3 {
+    font-weight: 300;
+    color: #616161;
+}
+
+.about-us p {
+    font-weight: 200;
+}
+
+.about-us blockquote {
+    border-left: 5px solid #ccc;
+}
+
+.portfolio h1, .portfolio h2,
+.blogs h1, .blogs h2 {
+    text-align: center;
+}
+
+.portfolio .view-all,
+.blogs .view-all {
+    text-align: center;
+}
+
+.blogs {
+    color: black;
+}
+
+.blogs .card-content .card-title {
+    font-family: 'Playfair Display', serif;
+    color: black;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+.blogs .card-content .blog-date {
+    font-weight: 300;
+    color: #000;
+    padding-bottom: 15px;
+}
+
+.blogs .card-content .blog-date b {
+    color: #9e9e9e;
+}
+
+.blogs .card-content p {
+    font-weight: 300;
+    color: #bdbdbd;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.blogs .entry-title a{
+    color: #FFAB40;
+}
+
+.contact .address {
+    font-family: 'Playfair Display', serif;
+    margin-left: 50px;
+    text-align: center
+}
+
+.contact .address h1 {
+    font-size: 80px;
+    color: #FFAB40;
+}
+
+.contact .address h3,
+.contact .address h5 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.contact .message {
+    margin-top: 30px;
+}
+
+.contact .message h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+footer.page-footer {
+    background-color: #FFAB40;
+    font-weight: 300;
+    margin-top: 0px;
+}
+
+footer.page-footer .social{
+    width: 100%;
+}
+
+footer.page-footer .btn-social{
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    color: #000;
+}
+
+/* label color */
+
+.input-field label,
+.input-field textarea {
+    color: #bdbdbd;
+}
+/* label focus color */
+
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus + label,
+.input-field textarea.materialize-textarea:focus + label {
+    color: #bdbdbd;
+}
+/* label underline focus color */
+
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field textarea.materialize-textarea:focus {
+    border-bottom: 1px solid #FFAB40;
+    box-shadow: 0 1px 0 0 #FFAB40;
+}
+/* valid color */
+
+.input-field input[type=text].valid,
+.input-field input[type=email].valid,
+.input-field textarea.materialize-textarea.valid {
+    border-bottom: 1px solid #00c853;
+    box-shadow: 0 1px 0 0 #00c853;
+}
+/* invalid color */
+
+.input-field input[type=text].invalid,
+.input-field input[type=email].invalid,
+.input-field textarea.materialize-textarea.invalid {
+    border-bottom: 1px solid #f4511e;
+    box-shadow: 0 1px 0 0 #f4511e;
+}
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: #FFAB40;
+}
+
+@media(min-width:768px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+    .intro .intro-body .brand-heading {
+        font-size: 100px;
+        line-height: 90px;
+    }
+    .intro .intro-body .intro-text {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .about-us h1, .portfolio h1, .blogs h1, .contact .address h1 {
+        font-size: 40px;
+    }
+    .about-us h3,
+    .portfolio h3 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .about-us .container,
+    .blogs .container {
+        padding: 10px 5px;
+    }
+    .about-us,
+    .portfolio,
+    .blogs,
+    .contact {
+        padding-bottom: 15px;
+        padding-top: 10px;
+    }
+    .contact .address h5 {
+        font-size: 20px;
+    }
+    .contact .address {
+        margin-left: 0px;
+    }
+}
+
+body.home.page {
+    background-image:none !important;
+}
+
+body.custom-background { 
+    color: #fff;
+    background-color: #fafafa;
+    background-position: bottom center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
